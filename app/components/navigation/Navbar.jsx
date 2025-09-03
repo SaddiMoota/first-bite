@@ -29,7 +29,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop menus */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden space-x-8">
               <a
                 href="/"
                 className="text-base text-gray-700 hover:text-green-600 px-3 py-2 rounded-md font-medium"
@@ -123,35 +123,35 @@ export default function Navbar() {
               {/* Menu Items */}
               <div className="flex-1 overflow-y-auto py-4">
                 <div className="px-4 space-y-1">
-                  <Link href="/orders" className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  <Link href="/orders" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                     <ShoppingBag className="w-5 h-5" />
                     <span>Orders</span>
                   </Link>
-                  <Link href="/account" className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  <Link href="/account" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                     <User className="w-5 h-5" />
                     <span>Account</span>
                   </Link>
-                  <Link href="/offers" className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  <Link href="/offers" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                     <Gift className="w-5 h-5" />
                     <span>Offers</span>
                   </Link>
-                  <Link href="/about" className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  <Link href="/about" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                     <Info className="w-5 h-5" />
                     <span>About</span>
                   </Link>
-                  <Link href="/faq" className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  <Link href="/faq" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                     <HelpCircle className="w-5 h-5" />
                     <span>FAQ</span>
                   </Link>
-                  <Link href="/cancellation-policy" className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  <Link href="/cancellation-policy" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                     <FileText className="w-5 h-5" />
                     <span>Cancellation Policy</span>
                   </Link>
-                  <Link href="/terms" className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  <Link href="/terms" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                     <FileText className="w-5 h-5" />
                     <span>Terms & Conditions</span>
                   </Link>
-                  <Link href="/privacy" className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                  <Link href="/privacy" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                     <Shield className="w-5 h-5" />
                     <span>Privacy Policy</span>
                   </Link>

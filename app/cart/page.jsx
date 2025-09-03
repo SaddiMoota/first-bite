@@ -2,11 +2,24 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useCart } from '../context/CartContext';
 import { MinusCircleIcon, PlusCircleIcon, PlusIcon } from 'lucide-react';
 
 export default function Cart() {
+  const router = useRouter();
   const { cartItems, updateQuantity, removeFromCart, getCartTotal } = useCart();
+
+  const processPayment = () => {
+    return new Promise((resolve) => {
+      // Simulating payment processing
+      setTimeout(() => {
+        // For demo purposes, let's say payment succeeds 80% of the time
+        const success = Math.random() < 0.8;
+        resolve({ success });
+      }, 1500);
+    });
+  };
   const deliveryFee = cartItems.length > 0 ? 40 : 0;
   const subtotal = getCartTotal();
   const total = subtotal + deliveryFee;
@@ -131,8 +144,18 @@ export default function Cart() {
           <div className="max-w-2xl mx-auto">
             <button 
               className="w-full bg-green-600 text-white py-2.5 rounded-full text-base sm:text-lg hover:bg-green-700 pointer"
-              onClick={() => {
-                // Add checkout logic here
+              onClick={async () => {
+                try {
+                  // Simulating payment process
+                  const response = await processPayment();
+                  if (response.success) {
+                    router.push('/order-success');
+                  } else {
+                    router.push('/order-failed');
+                  }
+                } catch (error) {
+                  router.push('/order-failed');
+                }
               }}
             >
               Proceed to Pay ₹{total}

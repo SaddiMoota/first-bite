@@ -2,7 +2,7 @@ export default function Login() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-50 to-yellow-50 px-2"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('/assets/images/bg/top-view-table-full-food.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('/images/bg/top-view-table-full-food.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -57,7 +57,7 @@ export default function Login() {
         {/* Links */}
         <div className="mt-4 flex justify-between text-xs">
           <a href="#" className="text-green-600 hover:underline">Resend OTP?</a>
-          {/* <a href="#" className="text-green-600 hover:underline">Create account</a> */}
+          <a href="/register" className="text-green-600 hover:underline">Create account</a>
         </div>
       </div>
     </div>

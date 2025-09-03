@@ -41,7 +41,7 @@ const allMenuItems = [
     description: "Pasta served with rich beef and tomato meat sauce.",
     price: 149,
     isVeg: false,
-    image: "/assets/images/food-items/pexels-4.jpg",
+    image: "/images/food-items/pexels-4.jpg",
   },
   {
     id: 5,
